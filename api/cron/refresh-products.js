@@ -48,7 +48,7 @@ export default async function handler(req, res) {
     }));
     const { put } = await import('@vercel/blob');
     await put('products.json', JSON.stringify({ updatedAt: new Date().toISOString(), products }), {
-      access: 'private',
+      access: 'public',
       addRandomSuffix: false,
       allowOverwrite: true
     });
