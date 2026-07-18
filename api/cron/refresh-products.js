@@ -42,6 +42,7 @@ export default async function handler(req, res) {
       })
     });
     const itemsData = await itemsRes.json();
+    console.error('AMAZON RESPONSE:', JSON.stringify(itemsData));
     const products = (itemsData.itemsResult?.items || []).map((item) => ({
       asin: item.asin,
       title: item.itemInfo?.title?.displayValue || '',
