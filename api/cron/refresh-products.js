@@ -17,8 +17,10 @@ export default async function handler(req, res) {
     const tokenData = await tokenRes.json();
     const accessToken = tokenData.access_token;
     const asins = [
-      'B09B2SBHQK',
-      'B09B8V1LZ3'
+      'B0FNWDR3S9',
+      'B0C285T9JV',
+      'B0FQ5STH6H',
+      'B0H1B2G6YB'
     ];
     const itemsRes = await fetch('https://creatorsapi.amazon/catalog/v1/getItems', {
       method: 'POST',
